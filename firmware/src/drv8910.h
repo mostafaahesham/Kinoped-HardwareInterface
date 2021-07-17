@@ -8,8 +8,21 @@
 #include "definitions.h"                // SYS function prototypes
 #include <stdint.h>
 
+#define HIGH     1U
+#define LOW      0U
+/*------------------------*/
+/*DRV8910 Variables*/
+/*-------------------------*/
+static uint8_t  duty_cycle;
+
+static uint16_t frame;
+static uint16_t response;
+/*-----------------------*/
 #define WRITE     0U
 #define READ      1U
+
+#define FORWARD       1U
+#define BACKWARDS     0U
 /*------------------*/
 /*Register Addresses*/
 /*----------------------------------*/
@@ -34,21 +47,22 @@
 
 #define PWM_DUTY_CH1_REG_ADDR     0x13U
 #define PWM_DUTY_CH2_REG_ADDR     0x14U
-/*--------------------------------------*/
+/*-------------------------------------*/
 /*Register Data*/
-/*-------------------------------*/
+/*-------------------------*/
 #define IC_STAT_REG      0U //for Reference 
-#define CONFIG_REG       0x1BU //DRV8910 
+#define CONFIG_REG       0x1BU //DRV8910 and some faults reporting configurations
 /*
  * Operation Control Registers
-    1,2,3->HIGH   Motor 1
-    4,5,6->LOW    Motor 1
-    7,8,9->HIGH   Motor 2
-    10,11,12->LOW Motor 2
+ * 1,4,5,6,7,9 Motor 1 PWM ch 1
+ * 2,3,8,10 Motor 2 PWM ch 
+ * 
+ * 1,5,7 Motor 1 High , 4,6,9 Motor 1 Low
+ * 2,8 Motor 2 High , 3,10 Motor 2 Low
 */
-#define OP_CTRL_REG_1     0x6AU // HB 1-3 High side enabled , HB 4 Low side enabled
-#define OP_CTRL_REG_2     0xA5U // HB 5-6 Low side enabled , HB 7 High side enabled
-#define OP_CTRL_REG_3     0x05U // HB 8 High side enable, HB 9-10 Low side enable
+#define OP_CTRL_REG_1     0x5AU // HB 1,2 High , HB 3,4 Low
+#define OP_CTRL_REG_2     0xA6U // HB 5,7,8 High , HB 6 Low
+#define OP_CTRL_REG_3     0x05U // HB 9,10 Low
  
 #define PWM_CTRL_REG_1     0xFFU //HB 1-8  PWM Mode
 #define PWM_CTRL_REG_2     0xC3U //HB 9-10 PWM Mode , PWM Generators 1-2 Enabled
@@ -56,16 +70,18 @@
 #define FW_CTRL_REG_1     0xFFU //Active FW on HB 1-8
 #define FW_CTRL_REG_2     0x0FU //Active FW on HB 9-10
 
-#define PWM_MAP_CTRL_REG_1     0x00U //HB 1-4 mapped to PWM ch 1 
-#define PWM_MAP_CTRL_REG_2     0x50U //HB 5-6 mapped to pwm ch 1 , HB 7-8 mapped to pwm ch 2
-#define PWM_MAP_CTRL_REG_3     0x05U //HB 9-10 mapped to pwm ch 2
+#define PWM_MAP_CTRL_REG_1     0x14U //1,4 PWM ch 1 , 2,3 PWM ch 2
+#define PWM_MAP_CTRL_REG_2     0x40U //5,6,7 PWM ch 1 , 8 PWM ch 2
+#define PWM_MAP_CTRL_REG_3     0x04U //9 PWM ch 1 , 10 PWM ch 2
 
-#define PWM_FREQ_CTRL_REG     0xFFU // PWM ch1-ch4 FREQ 2000 Hz
+#define PWM_FREQ_CTRL_REG     0x0FU // PWM ch 1 , ch 2 FREQ 2000 Hz
 /*---------------------------------*/
 /*DRV8910 APIs*/
 /*-----------------------------------------*/
+#define CALCULATE_DUTY(d)     duty_cycle = (d/(float)100)*(float)255
 
-
-
-
+bool PWM_Config(void);
+bool FW_Config(bool enable);
+bool PWM_Map(void);
+bool PWM_Write(uint8_t motor,uint8_t duty);
 
