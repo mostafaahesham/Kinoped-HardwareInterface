@@ -78,7 +78,7 @@ void GPIO_Initialize ( void )
 
     /* PORTC Initialization */
     LATC = 0x1; /* Initial Latch Value */
-    TRISCCLR = 0x1; /* Direction Control */
+    TRISCCLR = 0x3; /* Direction Control */
     ANSELCCLR = 0x5; /* Digital Mode Enable */
         /* Change Notice Enable */
     CNCONCSET = _CNCONC_ON_MASK;

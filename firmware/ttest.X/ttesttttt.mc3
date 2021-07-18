@@ -621,7 +621,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;212&quot; canvasWidth=&quot;1149&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;adchs&quot; x=&quot;451&quot; y=&quot;19&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;cdac1&quot; x=&quot;447&quot; y=&quot;103&quot;/&gt;
@@ -638,7 +639,6 @@
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;spi4&quot; x=&quot;319&quot; y=&quot;93&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;212&quot; canvasWidth=&quot;1149&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -6635,7 +6635,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;spi3&gt;
   &lt;spi3 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_RATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;1000000&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;5000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/spi3&gt;
 &lt;/spi3&gt;
@@ -6646,7 +6646,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;spi3&gt;
   &lt;spi3 dnOrder=&quot;0&quot; id=&quot;SPI_BRG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;spi3&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;spi3&quot; value=&quot;5&quot;/&gt;
     &lt;/Values&gt;
   &lt;/spi3&gt;
 &lt;/spi3&gt;
@@ -6860,70 +6860,70 @@
 </value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.TreeMap">
+   <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>..\src\config\default\definitions.h</file>
-         <hash>b35a3d66d2555e72899ceff9fe1f7f021578d278eaf69966c6957c97eff67e43</hash>
+         <file>..\src\config\default\peripheral\qei\plib_qei3.h</file>
+         <hash>d33e5152540b0894a18db9d52b52586f9d22942b3b8e59f44312c5ef1a01e128</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <file>..\src\config\default\peripheral\qei\plib_qei4.h</file>
+         <hash>6febfcd698286674914a5eb71de2de58916c31bd5875d5df5c33cfe417204887</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\exceptions.c</file>
-         <hash>bacd9060af8add5471ec3170808fe766dbd651e25104b5ecc8a7ebc02935e727</hash>
+         <file>..\src\config\default\stdio\xc32_monitor.c</file>
+         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\initialization.c</file>
-         <hash>46361273b0f7305dcd8cdc69c9de349844e4b4471ef5aaa652f6c366bbaf40d6</hash>
+         <file>..\src\config\default\peripheral\evic\plib_evic.h</file>
+         <hash>5def2e744792415df4734b79a9e0e3d1eb9d5102f2e63fca94e3972481feb582</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\interrupts.c</file>
-         <hash>c07fd4fef6fe0f3d76e830c3c1be34bd76d767c073fc6538cee027cd6f998c76</hash>
+         <file>..\src\config\default\peripheral\qei\plib_qei4.c</file>
+         <hash>abb2474759537f69c9bc37ab2e64794665c51caf65dbe8aecac5bcccb22e0ed9</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\interrupts.h</file>
-         <hash>9bfaa5301613c53e3acc04db9591e1385e6db6094fcd7da928aeff80db54da90</hash>
+         <file>..\src\config\default\peripheral\evic\plib_evic.c</file>
+         <hash>5408b22865232b20bfa2cafa975362414ec42555418f5c01271e76875f6a40c5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\qei\plib_qei1.h</file>
+         <hash>e3d29d44788e43596314c15ae51f5ceb6000356bfde29254c3dc79fe0e0443fe</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\qei\plib_qei2.h</file>
+         <hash>81d0185b43ae7a90801b8c4e345e7b2a980da2c6438257da8c811b41011c171d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\spi\spi_slave\plib_spi4_slave.h</file>
+         <hash>b506e0c6e14fe24bf50c893e24549ae8a236ef4a3e7e05ecdca9c71d19cbe8ca</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\qei\plib_qei1.c</file>
+         <hash>47dff61e2d8ee485884d8ed38d0d97fff103661220f047bf914766077c3a8376</hash>
       </entry>
       <entry>
          <file>..\src\config\default\p32MK1024MCF064.ld</file>
          <hash>4e1b9f1b9ace6492052bc92a714d1e8a541f2a1668d0a405a0bb3c8aa5acc9be</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\adchs\plib_adchs.c</file>
-         <hash>01dfa16ab1c116270e55066878d481b624ca4fb5f3a8d6df72e5253f910316ea</hash>
+         <file>..\src\config\default\peripheral\qei\plib_qei_common.h</file>
+         <hash>9ea3b4f643d5ca367a1e9a98b6e2fe8f9d16f5b6ab36f65e27ca41b52f2bfcd5</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\adchs\plib_adchs.h</file>
-         <hash>cd78f8bbb7d2ad1cc1ecfe3d28e6902ad5b94dcec9548def3b0f5dc40d9cc9f4</hash>
+         <file>..\src\config\default\peripheral\qei\plib_qei2.c</file>
+         <hash>8b7c8bf2ccdf3ae557541f841bdc91441ea8427d5531f5136393bedfdba68807</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\adchs\plib_adchs_common.h</file>
-         <hash>5e88225d113428287911cec070182cea9cb990b9c0a063059ae3a3117dd94cee</hash>
+         <file>..\src\config\default\peripheral\qei\plib_qei3.c</file>
+         <hash>a1125f6f21f6b019b27626939a4101001a39dcedf7a9b68e8508d395560d530b</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\cdac\plib_cdac1.c</file>
-         <hash>71b2bdb78558a5067ab69c9b48c6625b5250536ae3f973bf9b22d9e64cab7fa2</hash>
+         <file>..\src\config\default\peripheral\spi\spi_slave\plib_spi4_slave.c</file>
+         <hash>22943b23fe11f5a9aa03d3705c731f2b9201c7d17d54c625a0a7203d8715d49b</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\cdac\plib_cdac1.h</file>
-         <hash>c16a2a02bd3ed7ae203f118dcfdea2763683802fffb3ab02c116e7f4955990a9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\cdac\plib_cdac2.c</file>
-         <hash>b6f2d0790acf0736fe6ed0cd0e8f0f0658e1c259a9e09f3c1ccf64c56c21dd08</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\cdac\plib_cdac2.h</file>
-         <hash>4913cca36f8dc6c314c4ce122b6a9dc226c9c9cdad310b206ee75bc8aeb3755b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\cdac\plib_cdac3.c</file>
-         <hash>ebf7741f99e7be33971069c3a93e314681b105f64f501f1fb6664ea87cedbac1</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\cdac\plib_cdac3.h</file>
-         <hash>a884ef88d255df5c5b708c5b36f214d55ae51546afaa57bfdf92ca2cfbafaf18</hash>
+         <file>..\src\config\default\toolchain_specifics.h</file>
+         <hash>c86ea57caade552aa8a4e7853594d481930697fdf3549b89ba0f07604894e0e8</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\clk\plib_clk.c</file>
@@ -6934,104 +6934,104 @@
          <hash>aeb73e24e5a518024b1c3f7dce953a5cbacead08f55e80ae465fc8d2e522e477</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\evic\plib_evic.c</file>
-         <hash>5408b22865232b20bfa2cafa975362414ec42555418f5c01271e76875f6a40c5</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\evic\plib_evic.h</file>
-         <hash>5def2e744792415df4734b79a9e0e3d1eb9d5102f2e63fca94e3972481feb582</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\gpio\plib_gpio.c</file>
-         <hash>51774c7f3ab20534454f409607f3870279d9a174e031b65bb330da5483001a50</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\gpio\plib_gpio.h</file>
-         <hash>afaaadabb8e013e81eb73c14a576d5ef670da379153ba349b431713836b2aa9b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\mcpwm\plib_mcpwm.c</file>
-         <hash>f307fa62d55a843898fc9813059380d520b806026724f53166484065ee4030b4</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\mcpwm\plib_mcpwm.h</file>
-         <hash>bcd46f45b3b2e8bf6f48002edc8ae381b25de602627153dac37269c2680c6269</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\mcpwm\plib_mcpwm_common.h</file>
-         <hash>b940867eca350bc1a7c4fdde694b2fde0d0eff5036759771f6a9f5d334cd8aaa</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei1.c</file>
-         <hash>47dff61e2d8ee485884d8ed38d0d97fff103661220f047bf914766077c3a8376</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei1.h</file>
-         <hash>e3d29d44788e43596314c15ae51f5ceb6000356bfde29254c3dc79fe0e0443fe</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei2.c</file>
-         <hash>8b7c8bf2ccdf3ae557541f841bdc91441ea8427d5531f5136393bedfdba68807</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei2.h</file>
-         <hash>81d0185b43ae7a90801b8c4e345e7b2a980da2c6438257da8c811b41011c171d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei3.c</file>
-         <hash>a1125f6f21f6b019b27626939a4101001a39dcedf7a9b68e8508d395560d530b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei3.h</file>
-         <hash>d33e5152540b0894a18db9d52b52586f9d22942b3b8e59f44312c5ef1a01e128</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei4.c</file>
-         <hash>abb2474759537f69c9bc37ab2e64794665c51caf65dbe8aecac5bcccb22e0ed9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei4.h</file>
-         <hash>6febfcd698286674914a5eb71de2de58916c31bd5875d5df5c33cfe417204887</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\qei\plib_qei_common.h</file>
-         <hash>9ea3b4f643d5ca367a1e9a98b6e2fe8f9d16f5b6ab36f65e27ca41b52f2bfcd5</hash>
-      </entry>
-      <entry>
          <file>..\src\config\default\peripheral\spi\spi_master\plib_spi3_master.c</file>
-         <hash>451eb8da59552d2a5c13e431e7a11689531adf4ac172dc9a89269597bb46198c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\default\peripheral\spi\spi_master\plib_spi3_master.h</file>
-         <hash>e09a2acc0c63a4bafce8677f92f09953f02cd10f071764010e3595413967f80b</hash>
+         <hash>a7339e600ac93f2a2d7ef728619c398270d15b39edd004fa2d7e60cf53e3e137</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\spi\spi_master\plib_spi_master_common.h</file>
          <hash>844a71566e886cd1f28024000d440ac48841cdb4f4059f5feefac8e4334f12ef</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\spi\spi_slave\plib_spi4_slave.c</file>
-         <hash>22943b23fe11f5a9aa03d3705c731f2b9201c7d17d54c625a0a7203d8715d49b</hash>
+         <file>..\src\config\default\initialization.c</file>
+         <hash>4fd2b5e2f02906eb0e4f58ffea5a187a84790ddb6b918ff79d6b88fa6e26e8c1</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\spi\spi_slave\plib_spi4_slave.h</file>
-         <hash>b506e0c6e14fe24bf50c893e24549ae8a236ef4a3e7e05ecdca9c71d19cbe8ca</hash>
+         <file>..\src\config\default\peripheral\mcpwm\plib_mcpwm.c</file>
+         <hash>f307fa62d55a843898fc9813059380d520b806026724f53166484065ee4030b4</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\spi\spi_master\plib_spi3_master.h</file>
+         <hash>e09a2acc0c63a4bafce8677f92f09953f02cd10f071764010e3595413967f80b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\exceptions.c</file>
+         <hash>bacd9060af8add5471ec3170808fe766dbd651e25104b5ecc8a7ebc02935e727</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\mcpwm\plib_mcpwm.h</file>
+         <hash>bcd46f45b3b2e8bf6f48002edc8ae381b25de602627153dac37269c2680c6269</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\cdac\plib_cdac3.c</file>
+         <hash>ebf7741f99e7be33971069c3a93e314681b105f64f501f1fb6664ea87cedbac1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\cdac\plib_cdac2.c</file>
+         <hash>b6f2d0790acf0736fe6ed0cd0e8f0f0658e1c259a9e09f3c1ccf64c56c21dd08</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\definitions.h</file>
+         <hash>c2b11cf57bc37622e3dd7caea161a1aa2b82da007ec888b104c0df204b60ca19</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\gpio\plib_gpio.h</file>
+         <hash>afaaadabb8e013e81eb73c14a576d5ef670da379153ba349b431713836b2aa9b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\adchs\plib_adchs.c</file>
+         <hash>01dfa16ab1c116270e55066878d481b624ca4fb5f3a8d6df72e5253f910316ea</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\interrupts.h</file>
+         <hash>9bfaa5301613c53e3acc04db9591e1385e6db6094fcd7da928aeff80db54da90</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\spi\spi_slave\plib_spi_slave_common.h</file>
          <hash>e27b25a629f856cdace43686717605f424c88eed3c4b148aaea7b8711dd7f3f5</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <file>..\src\config\default\device.h</file>
+         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\toolchain_specifics.h</file>
-         <hash>c86ea57caade552aa8a4e7853594d481930697fdf3549b89ba0f07604894e0e8</hash>
+         <file>..\src\config\default\peripheral\cdac\plib_cdac1.c</file>
+         <hash>71b2bdb78558a5067ab69c9b48c6625b5250536ae3f973bf9b22d9e64cab7fa2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\gpio\plib_gpio.c</file>
+         <hash>965991d47cb27d0623d8cb66321ce54692154c39b2cddf3e0fe4c2813322833b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\adchs\plib_adchs_common.h</file>
+         <hash>5e88225d113428287911cec070182cea9cb990b9c0a063059ae3a3117dd94cee</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
          <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\mcpwm\plib_mcpwm_common.h</file>
+         <hash>b940867eca350bc1a7c4fdde694b2fde0d0eff5036759771f6a9f5d334cd8aaa</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\cdac\plib_cdac2.h</file>
+         <hash>4913cca36f8dc6c314c4ce122b6a9dc226c9c9cdad310b206ee75bc8aeb3755b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\cdac\plib_cdac1.h</file>
+         <hash>c16a2a02bd3ed7ae203f118dcfdea2763683802fffb3ab02c116e7f4955990a9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\interrupts.c</file>
+         <hash>c07fd4fef6fe0f3d76e830c3c1be34bd76d767c073fc6538cee027cd6f998c76</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\adchs\plib_adchs.h</file>
+         <hash>cd78f8bbb7d2ad1cc1ecfe3d28e6902ad5b94dcec9548def3b0f5dc40d9cc9f4</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\peripheral\cdac\plib_cdac3.h</file>
+         <hash>a884ef88d255df5c5b708c5b36f214d55ae51546afaa57bfdf92ca2cfbafaf18</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

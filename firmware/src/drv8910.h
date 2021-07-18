@@ -23,6 +23,9 @@ static uint16_t response;
 
 #define FORWARD       1U
 #define BACKWARDS     0U
+
+#define DRIVER_1     1U
+#define DRIVER_2     0U
 /*------------------*/
 /*Register Addresses*/
 /*----------------------------------*/
@@ -80,8 +83,13 @@ static uint16_t response;
 /*-----------------------------------------*/
 #define CALCULATE_DUTY(d)     duty_cycle = (d/(float)100)*(float)255
 
+bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool device_id);
+
 bool PWM_Config(void);
 bool FW_Config(bool enable);
 bool PWM_Map(void);
-bool PWM_Write(uint8_t motor,uint8_t duty);
+bool PWM_Freq(void);
+bool PWM_Duty(uint8_t motor , uint8_t duty);
+bool PWM_HB_Enable(uint8_t motor,bool direction);
+
 
