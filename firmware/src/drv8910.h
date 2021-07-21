@@ -10,6 +10,13 @@
 
 #define HIGH     1U
 #define LOW      0U
+
+struct MOTOR
+{
+    uint8_t driver_id;
+    uint8_t motor_id;
+    uint8_t action[3];
+};
 /*------------------------*/
 /*DRV8910 Variables*/
 /*-------------------------*/
@@ -21,11 +28,21 @@ static uint16_t response;
 #define WRITE     0U
 #define READ      1U
 
-#define FORWARD       1U
-#define BACKWARDS     0U
+#define STOP          1U
+#define FORWARD       2U
+#define BACKWARDS     3U
 
-#define DRIVER_1     1U
-#define DRIVER_2     0U
+#define OP_CTRL_REG_1     0U 
+#define OP_CTRL_REG_2     1U 
+#define OP_CTRL_REG_3     2U 
+
+#define PA0622_1      1U
+#define PA0622_2      2U
+#define PA06180_1     3U
+#define PA06180_2     4U  
+
+#define DRIVER_1     0U
+#define DRIVER_2     1U
 /*------------------*/
 /*Register Addresses*/
 /*----------------------------------*/
@@ -55,17 +72,24 @@ static uint16_t response;
 /*-------------------------*/
 #define IC_STAT_REG      0U //for Reference 
 #define CONFIG_REG       0x1BU //DRV8910 and some faults reporting configurations
-/*
- * Operation Control Registers
- * 1,4,5,6,7,9 Motor 1 PWM ch 1
- * 2,3,8,10 Motor 2 PWM ch 
- * 
- * 1,5,7 Motor 1 High , 4,6,9 Motor 1 Low
- * 2,8 Motor 2 High , 3,10 Motor 2 Low
-*/
-#define OP_CTRL_REG_1     0x5AU // HB 1,2 High , HB 3,4 Low
-#define OP_CTRL_REG_2     0xA6U // HB 5,7,8 High , HB 6 Low
-#define OP_CTRL_REG_3     0x05U // HB 9,10 Low
+/*Motor 1 Direction Masks*/
+#define M1_MASK1_FWD     0x42U                                      
+#define M1_MASK1_BWD     0x81U
+
+#define M1_MASK2_FWD     0x26U
+#define M1_MASK2_BWD     0x19U
+
+#define M1_MASK3_FWD     0x01U
+#define M1_MASK3_BWD     0x02U
+/*Motor 2 Direction Masks*/
+#define M2_MASK1_FWD     0x18U                                      
+#define M2_MASK1_BWD     0x24U
+
+#define M2_MASK2_FWD     0x80U
+#define M2_MASK2_BWD     0x40U
+
+#define M2_MASK3_FWD     0x04U
+#define M2_MASK3_BWD     0x08U
  
 #define PWM_CTRL_REG_1     0xFFU //HB 1-8  PWM Mode
 #define PWM_CTRL_REG_2     0xC3U //HB 9-10 PWM Mode , PWM Generators 1-2 Enabled
@@ -83,13 +107,13 @@ static uint16_t response;
 /*-----------------------------------------*/
 #define CALCULATE_DUTY(d)     duty_cycle = (d/(float)100)*(float)255
 
-bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool device_id);
+bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool driver_id);
 
 bool PWM_Config(void);
 bool FW_Config(bool enable);
 bool PWM_Map(void);
 bool PWM_Freq(void);
 bool PWM_Duty(uint8_t motor , uint8_t duty);
-bool PWM_HB_Enable(uint8_t motor,bool direction);
+bool MOTOR_Control(struct MOTOR motor);
 
 

@@ -7,10 +7,10 @@ SPI_TRANSFER_SETUP s = {5000000,SPI_CLOCK_PHASE_LEADING_EDGE,SPI_CLOCK_POLARITY_
 /*--------------------------*/
 /*APIs Implementation*/
 /*--------------------------*/
-bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool device_id)
+bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool driver_id)
 {
     frame = operation << 14U | address << 8U | data;
-    if(device_id == DRIVER_1)
+    if(driver_id == DRIVER_1)
     {
         GPIO_PinWrite(GPIO_PIN_RB5,LOW);
         SPI3_WriteRead((void*)frame,16U,(void*)response,16U);
@@ -18,7 +18,7 @@ bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool device_id)
         //delay > 400ns
         return true;
     }
-    else if(device_id == DRIVER_2)
+    else if(driver_id == DRIVER_2)
     {
         GPIO_PinWrite(GPIO_PIN_RB7,LOW);
         SPI3_WriteRead((void*)frame,16U,(void*)response,16U);
@@ -122,3 +122,18 @@ bool PWM_Duty(uint8_t motor,uint8_t duty)
     }
 }
 
+bool MOTOR_Control(struct MOTOR motor)
+{
+    if(motor.motor_id > 4U || motor.driver_id > 1U)
+    {
+        return false;
+    }
+    else
+    {
+        COMMAND_Send(WRITE,OP_CTRL_REG_1_ADDR,motor.action[OP_CTRL_REG_1],motor.driver_id);
+        COMMAND_Send(WRITE,OP_CTRL_REG_2_ADDR,motor.action[OP_CTRL_REG_2],motor.driver_id);
+        COMMAND_Send(WRITE,OP_CTRL_REG_3_ADDR,motor.action[OP_CTRL_REG_3],motor.driver_id);
+        
+        return true;
+    }
+}
