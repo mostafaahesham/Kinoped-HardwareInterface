@@ -5,17 +5,17 @@ Archive member included to satisfy reference by file (symbol)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(memcpy.o)
                               build/default/production/_ext/2093680591/plib_spi4_slave.o (memcpy)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
-                              C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o (_on_reset)
+                              C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o (_on_reset)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
-                              C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o (_on_bootstrap)
+                              C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o (_on_bootstrap)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-nmi-handler.o)
-                              C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o (_nmi_handler)
+                              C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o (_nmi_handler)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(pic32_data_init.o)
-                              C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o (__pic32_data_init)
+                              C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o (__pic32_data_init)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(general-exception.o)
-                              C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o (_general_exception_context)
+                              C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o (_general_exception_context)
 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
-                              C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o (_DefaultInterrupt)
+                              C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o (_DefaultInterrupt)
 
 Microchip PIC32 Memory-Usage Report
 
@@ -419,31 +419,31 @@ Discarded input sections
  .reginfo       0x0000000000000000       0x18 build/default/production/_ext/1360937237/main.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 build/default/production/_ext/1360937237/main.o
- .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
- .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
- .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
- .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+ .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
+ .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
+ .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
- .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
- .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
- .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
- .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
+                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
+ .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
+ .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
+ .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
- .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
- .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
- .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
- .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
+ .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
+ .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
+ .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
- .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
- .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
- .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
- .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
+                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
+ .text          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
+ .data          0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
+ .bss           0x0000000000000000        0x0 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
- .discard       0x0000000000000000        0x4 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
+                0x0000000000000000       0x18 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
+ .discard       0x0000000000000000        0x4 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
  .reginfo       0x0000000000000000       0x18 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
@@ -778,20 +778,20 @@ END GROUP
 
 .reset          0x00000000bfc00000      0x198
  *(.reset)
- .reset         0x00000000bfc00000       0x18 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+ .reset         0x00000000bfc00000       0x18 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
                 0x00000000bfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0x00000000bfc00018      0x180 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+                0x00000000bfc00018      0x180 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
                 0x00000000bfc00018                _startup
 
 .bev_excpt      0x00000000bfc00380       0x10
  *(.bev_handler)
- .bev_handler   0x00000000bfc00380       0x10 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+ .bev_handler   0x00000000bfc00380       0x10 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
 
 .app_excpt      0x000000009d000180       0x10
  *(.gen_handler)
- .gen_handler   0x000000009d000180       0x10 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+ .gen_handler   0x000000009d000180       0x10 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
 
 .vectors        0x000000009d000200       0x70
                 0x000000009d000200                . = ALIGN (0x4)
@@ -2158,13 +2158,13 @@ END GROUP
  .gnu.attributes
                 0x0000000000000140       0x10 build/default/production/_ext/1360937237/main.o
  .gnu.attributes
-                0x0000000000000150       0x10 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+                0x0000000000000150       0x10 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
  .gnu.attributes
-                0x0000000000000160       0x10 C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
+                0x0000000000000160       0x10 C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
  .gnu.attributes
-                0x0000000000000170       0x10 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x0000000000000170       0x10 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
  .gnu.attributes
-                0x0000000000000180       0x10 C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
+                0x0000000000000180       0x10 C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
  .gnu.attributes
                 0x0000000000000190       0x10 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
  .gnu.attributes
@@ -2182,10 +2182,10 @@ END GROUP
  .gnu.attributes
                 0x0000000000000200       0x10 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
                 0x0000000000000200                _min_heap_size = 0x200
-LOAD C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
-LOAD C:\Users\mosta\AppData\Local\Temp\ccKlGAbz.o
-LOAD C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
-LOAD C:\Users\mosta\AppData\Local\Temp\ccXKcPnK.o
+LOAD C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
+LOAD C:\Users\mosta\AppData\Local\Temp\ccrCcEF9.o
+LOAD C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
+LOAD C:\Users\mosta\AppData\Local\Temp\ccHFq2Xq.o
 LOAD c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
 LOAD c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32mx/8.3.1/fpu64\libgcc.a
 START GROUP
@@ -2214,42 +2214,42 @@ LOAD data_init
 .__vector_offset_BF8105B8_data
                 0x00000000bf8105b8      0x180
  .__vector_offset_BF8105B8_data
-                0x00000000bf8105b8      0x180 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf8105b8      0x180 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF810848_data
                 0x00000000bf810848       0x94
  .__vector_offset_BF810848_data
-                0x00000000bf810848       0x94 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf810848       0x94 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF8107D0_data
                 0x00000000bf8107d0       0x74
  .__vector_offset_BF8107D0_data
-                0x00000000bf8107d0       0x74 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf8107d0       0x74 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF810540_data
                 0x00000000bf810540       0x70
  .__vector_offset_BF810540_data
-                0x00000000bf810540       0x70 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf810540       0x70 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF8107A8_data
                 0x00000000bf8107a8       0x24
  .__vector_offset_BF8107A8_data
-                0x00000000bf8107a8       0x24 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf8107a8       0x24 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF8108F8_data
                 0x00000000bf8108f8       0x24
  .__vector_offset_BF8108F8_data
-                0x00000000bf8108f8       0x24 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf8108f8       0x24 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF810748_data
                 0x00000000bf810748       0x10
  .__vector_offset_BF810748_data
-                0x00000000bf810748       0x10 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf810748       0x10 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .__vector_offset_BF810938_data
                 0x00000000bf810938        0x8
  .__vector_offset_BF810938_data
-                0x00000000bf810938        0x8 C:\Users\mosta\AppData\Local\Temp\ccPHxE2x.o
+                0x00000000bf810938        0x8 C:\Users\mosta\AppData\Local\Temp\ccWlOXrA.o
 
 .bss            0x000000008000000c      0x244
  .bss           0x000000008000000c      0x220 build/default/production/_ext/2093680591/plib_spi4_slave.o
@@ -2380,7 +2380,7 @@ LOAD data_init
 .text.main_entry
                 0x000000009d000190       0x54
  .text.main_entry
-                0x000000009d000190       0x54 C:\Users\mosta\AppData\Local\Temp\ccVrpYf0.o
+                0x000000009d000190       0x54 C:\Users\mosta\AppData\Local\Temp\cc8K5Ng8.o
                 0x000000009d0001c4                __crt0_exit
 
 .text.EVIC_Initialize
