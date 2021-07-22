@@ -93,35 +93,6 @@ bool PWM_Freq(void)
     return true;
 }
 
-bool PWM_Duty(uint8_t motor,uint8_t duty)
-{
-    if(motor > 4U)
-    {
-       return false; 
-    }
-    else
-    {
-        CALCULATE_DUTY(duty);
-        switch (motor)
-        {
-            case 1U:
-                COMMAND_Send(WRITE,PWM_DUTY_CH1_REG_ADDR,duty_cycle,DRIVER_1);
-                return true;
-            case 2:
-                COMMAND_Send(WRITE,PWM_DUTY_CH2_REG_ADDR,duty_cycle,DRIVER_1);
-                return true;
-            case 3:
-                COMMAND_Send(WRITE,PWM_DUTY_CH1_REG_ADDR,duty_cycle,DRIVER_2);
-                return true;
-            case 4:
-                COMMAND_Send(WRITE,PWM_DUTY_CH2_REG_ADDR,duty_cycle,DRIVER_2);
-                return true;
-            default:
-                return false;
-        }
-    }
-}
-
 bool MOTOR_Control(struct MOTOR motor)
 {
     if(motor.motor_id > 4U || motor.driver_id > 1U)
@@ -130,9 +101,22 @@ bool MOTOR_Control(struct MOTOR motor)
     }
     else
     {
-        COMMAND_Send(WRITE,OP_CTRL_REG_1_ADDR,motor.action[OP_CTRL_REG_1],motor.driver_id);
-        COMMAND_Send(WRITE,OP_CTRL_REG_2_ADDR,motor.action[OP_CTRL_REG_2],motor.driver_id);
-        COMMAND_Send(WRITE,OP_CTRL_REG_3_ADDR,motor.action[OP_CTRL_REG_3],motor.driver_id);
+        if(motor.motor_id == PA0622_1 || motor.motor_id == PA06180_1)
+        {
+            COMMAND_Send(WRITE,PWM_DUTY_CH1_REG_ADDR,motor.duty_cycle,motor.driver_id);
+            
+            COMMAND_Send(WRITE,OP_CTRL_REG_1_ADDR,motor.action[OP_CTRL_REG_1],motor.driver_id);
+            COMMAND_Send(WRITE,OP_CTRL_REG_2_ADDR,motor.action[OP_CTRL_REG_2],motor.driver_id);
+            COMMAND_Send(WRITE,OP_CTRL_REG_3_ADDR,motor.action[OP_CTRL_REG_3],motor.driver_id);
+        }
+        else if(motor.motor_id == PA0622_2 || motor.motor_id == PA06180_2)
+        {
+            COMMAND_Send(WRITE,PWM_DUTY_CH2_REG_ADDR,motor.duty_cycle,motor.driver_id);
+            
+            COMMAND_Send(WRITE,OP_CTRL_REG_1_ADDR,motor.action[OP_CTRL_REG_1],motor.driver_id);
+            COMMAND_Send(WRITE,OP_CTRL_REG_2_ADDR,motor.action[OP_CTRL_REG_2],motor.driver_id);
+            COMMAND_Send(WRITE,OP_CTRL_REG_3_ADDR,motor.action[OP_CTRL_REG_3],motor.driver_id);
+        }
         
         return true;
     }

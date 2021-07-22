@@ -15,13 +15,12 @@ struct MOTOR
 {
     uint8_t driver_id;
     uint8_t motor_id;
+    uint8_t duty_cycle;
     uint8_t action[3];
 };
 /*------------------------*/
 /*DRV8910 Variables*/
 /*-------------------------*/
-static uint8_t  duty_cycle;
-
 static uint16_t frame;
 static uint16_t response;
 /*-----------------------*/
@@ -105,7 +104,7 @@ static uint16_t response;
 /*---------------------------------*/
 /*DRV8910 APIs*/
 /*-----------------------------------------*/
-#define CALCULATE_DUTY(d)     duty_cycle = (d/(float)100)*(float)255
+#define CALCULATE_DUTY(struct m)     m.duty_cycle = (d/(float)100)*(float)255
 
 bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool driver_id);
 
@@ -113,7 +112,6 @@ bool PWM_Config(void);
 bool FW_Config(bool enable);
 bool PWM_Map(void);
 bool PWM_Freq(void);
-bool PWM_Duty(uint8_t motor , uint8_t duty);
 bool MOTOR_Control(struct MOTOR motor);
 
 
