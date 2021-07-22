@@ -101,7 +101,7 @@ bool MOTOR_Control(struct MOTOR motor)
     }
     else
     {
-        if(motor.motor_id == PA0622_1 || motor.motor_id == PA06180_1)
+        if(motor.motor_id == PA0622_1 || motor.motor_id == PA0622_2)
         {
             COMMAND_Send(WRITE,PWM_DUTY_CH1_REG_ADDR,motor.duty_cycle,motor.driver_id);
             
@@ -109,7 +109,7 @@ bool MOTOR_Control(struct MOTOR motor)
             COMMAND_Send(WRITE,OP_CTRL_REG_2_ADDR,motor.action[OP_CTRL_REG_2],motor.driver_id);
             COMMAND_Send(WRITE,OP_CTRL_REG_3_ADDR,motor.action[OP_CTRL_REG_3],motor.driver_id);
         }
-        else if(motor.motor_id == PA0622_2 || motor.motor_id == PA06180_2)
+        else if(motor.motor_id == PA06180_1 || motor.motor_id == PA06180_2)
         {
             COMMAND_Send(WRITE,PWM_DUTY_CH2_REG_ADDR,motor.duty_cycle,motor.driver_id);
             
