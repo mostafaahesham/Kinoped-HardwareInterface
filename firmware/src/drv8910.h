@@ -17,19 +17,20 @@ struct MOTOR
     uint8_t motor_id;
     uint8_t duty_cycle;
     uint8_t action[3];
+    uint32_t position;
 };
 /*------------------------*/
 /*DRV8910 Variables*/
 /*-------------------------*/
-static uint16_t frame;
-static uint16_t response;
+static uint16_t frame; //command frame
+static uint16_t response; // response frame
 
-static uint8_t dc;
+static uint8_t dc; //duty cycle
 /*-----------------------*/
 #define WRITE     0U
 #define READ      1U
 
-#define STOP          1U
+#define BREAK         1U
 #define FORWARD       2U
 #define BACKWARDS     3U
 
@@ -73,7 +74,7 @@ static uint8_t dc;
 /*-------------------------*/
 #define IC_STAT_REG      0U //for Reference 
 #define CONFIG_REG       0x1BU //DRV8910 and some faults reporting configurations
-/*Motor 1 Direction Masks*/
+/*Motor 1 Direction Masks (Half bridges)*/
 #define M1_MASK1_FWD     0x42U                                      
 #define M1_MASK1_BWD     0x81U
 #define M1_MASK1_BRK     0x41U

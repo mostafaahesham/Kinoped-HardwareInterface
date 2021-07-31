@@ -25,6 +25,7 @@ bool COMMAND_Send(bool operation,uint8_t address,uint8_t data,bool driver_id)
         //delay > 400ns
         return true;
     }
+    return false;
 }
 
 bool PWM_Config(void)
@@ -66,6 +67,7 @@ bool FW_Config(bool enable)
         
         return true; 
     }
+    return false;
 }
 
 bool PWM_Map(void)
@@ -119,4 +121,5 @@ bool MOTOR_Control(struct MOTOR motor)
         
         return true;
     }
+    return false;
 }
