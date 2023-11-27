@@ -26,9 +26,13 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
-#include <stdint.h>
-#include "drv8910.h"
-
+#include "third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h"
+#include "third_party/rtos/FreeRTOS/Source/include/task.h"
+#include "third_party/rtos/FreeRTOS/Source/include/semphr.h"
+#include "third_party/rtos/FreeRTOS/Source/include/queue.h"
+#include <stdio.h>  
+#include <math.h>
+#include "roscontrol.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -38,11 +42,15 @@
 
 int main ( void )
 {
+    leg = RIGHT_LEG;
+    
+    xTaskCreate(MAIN_INIT_TASK, "Main Initialization", 256, NULL, tskIDLE_PRIORITY + 2, NULL);
     /* Initialize all modules */
-    SYS_Initialize ( NULL );
+    vTaskStartScheduler();
+//    SYS_Initialize ( NULL );
 
     while ( true )
-    {
+    {     
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
     }
@@ -56,4 +64,3 @@ int main ( void )
 /*******************************************************************************
  End of File
 */
-
